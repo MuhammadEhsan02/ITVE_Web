@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, BookOpenText, Sparkles, Award, Info, Phone, LogIn } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/logo.jpg';
 
 const navLinks = [
   { to: '/', text: 'Home', icon: <Sparkles className="h-5 w-5" /> },
@@ -52,7 +53,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center">
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <img  className="h-12 w-auto" alt="ITVE Logo" src="https://images.unsplash.com/photo-1671525526206-6671a39bdc12" />
+                <img className="h-12 w-auto" alt="ITVE Logo" src={logo} />
               </motion.div>
               <span className="ml-3 text-2xl font-bold text-itve-blue-dark">ITVE</span>
             </Link>
